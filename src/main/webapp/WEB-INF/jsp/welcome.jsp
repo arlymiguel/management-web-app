@@ -17,12 +17,10 @@
 	<div class="container">
 
 		<select id="productList" multiple="multiple">
-			<option value="1">One</option>
-			<option value="2">two</option>
-			<option value="3">three</option>
 		</select>
 
-		<button type="button" class="btn btn-primary" id="addProduct">+</button>
+		<button type="button" class="btn btn-primary" id="addProduct"
+			data-toggle="modal" data-target="#productModal">+</button>
 		<button type="button" class="btn btn-danger" id="dropProduct">-</button>
 
 		<button type="button" class="btn btn-primary" id="undobtn">Undo</button>
@@ -30,19 +28,34 @@
 
 	</div>
 
-	<div id="productModal" class="modal">
-		<div class="modal-content">
-			<span class="close">&times;</span>
-			<p>Enter some text in the field</p>
-			<input id="producttxt" type="text" />
+
+	<div class="modal fade" id="productModal" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Products</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Enter the name of a product</p>
+					<input id="producttxt" type="text" />
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary" id="addProductName" >Add</button>
+				</div>
+			</div>
 		</div>
 	</div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-		crossorigin="anonymous"></script>
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
 		integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
