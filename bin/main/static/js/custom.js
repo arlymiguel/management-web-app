@@ -86,7 +86,8 @@ Producto.prototype.addToList = function() {
 
 Producto.prototype.deleteProduct = function() {
 	var obj = this;
-
+	obj.reset();
+	
 	var options = [];
 	var i = 0;
 	$("#productList > option:selected").each(function() {
